@@ -1,11 +1,19 @@
 console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
 
+let myCollection=[];
+addToCollection();
+function addToCollection(title, artist, yearPublished)
+{
 
+}
 
-
-
-
+const ArtistTraits = {
+  title: "The Real Slim Shady",
+  artist: "Eminem",
+  yearPublished: 2000
+}
+myCollection.push(ArtistTraits);
 
 
 
