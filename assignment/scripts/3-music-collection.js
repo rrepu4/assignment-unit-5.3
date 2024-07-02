@@ -16,12 +16,34 @@ function addToCollection(Collection,title, artist, yearPublished){
 
 }
 
-const ArtistTraits = {
-  title: "The Real Slim Shady",
-  artist: "Eminem",
-  yearPublished: 2000
+addToCollection(myCollection, 'The Real Slim Shady', 'Eminem', 2000);
+addToCollection(myCollection, 'Th way I am', 'Eminem', 2000);
+addToCollection(myCollection, 'Stan', 'Eminem', 2000);
+
+console.log('myAlbum', myCollection);
+
+function showCollection(collection) {
+  for (let items of collection) {
+    console.log(`${items.title} by ${items.artist}, published in ${items.yearPublished}`);
+  }
+  
+
 }
-myCollection.push(ArtistTraits);
+
+(showCollection(myCollection));
+
+function findByArtist(collection, artist){
+  let matchedArtists = [];
+  for (let singer of collection) {
+   if (singer.artist === artist)
+    matchedArtists.push(singer);
+  }
+  return matchedArtists;
+
+  
+}
+
+
 
 
 
